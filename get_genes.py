@@ -94,10 +94,6 @@ def contig_file_prediction(contig_file):
 	print(contig_fle)
 	print(remove_extension)
 	gene_prediction(contig_fle, remove_extension)
-#	if inter_remove == "T":
-#		os.remove(remove_extension + "hits.sto ")
-#	else:
-#		print("don't remove")
 
 
 #gets the name of the basename file from a directory and passes it into gene_predection
@@ -107,9 +103,7 @@ def contig_dir_prediction(contig_directory):
 		#make sure it is a file
 		if os.path.isfile(f):
 			contig_file = os.path.basename(f)
-			#print(base_fname)
 			remove_extension = contig_file.rsplit(".", 1 ) [0]
-			#print("remove extension: " + remove_extension)
 			gene_prediction(contig_file, remove_extension)
 				
 			if inter_remove == "T":
